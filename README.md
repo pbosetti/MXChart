@@ -9,4 +9,4 @@ It will be improved in time, but It is aimed at remaining easy and simple to use
 
 The XCode project targets iOS 8 and comes as an example universal app that collects and shows in realtime the three acceleration components, updated at 60 Hz rate. The MXChartView class itself is in one single file, `MXChartView.swift`.
 
-
+The MXChartView class implements the @IBDesignable/@IBInspectable clauses, so that its instances and settings can be directly defined within Interface Builder.
