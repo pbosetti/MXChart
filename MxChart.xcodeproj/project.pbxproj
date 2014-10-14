@@ -13,6 +13,7 @@
 		88D3F5ED19ED3AEC0086ADDA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D3F5EC19ED3AEC0086ADDA /* Images.xcassets */; };
 		88D3F5F019ED3AEC0086ADDA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D3F5EE19ED3AEC0086ADDA /* LaunchScreen.xib */; };
 		88D3F5FC19ED3AEC0086ADDA /* MxChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D3F5FB19ED3AEC0086ADDA /* MxChartTests.swift */; };
+		88D3F60619ED3AFF0086ADDA /* MXChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D3F60519ED3AFF0086ADDA /* MXChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		88D3F5F519ED3AEC0086ADDA /* MxChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MxChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D3F5FA19ED3AEC0086ADDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D3F5FB19ED3AEC0086ADDA /* MxChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxChartTests.swift; sourceTree = "<group>"; };
+		88D3F60519ED3AFF0086ADDA /* MXChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MXChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		88D3F5E219ED3AEC0086ADDA /* MxChart */ = {
 			isa = PBXGroup;
 			children = (
+				88D3F60519ED3AFF0086ADDA /* MXChartView.swift */,
 				88D3F5E519ED3AEC0086ADDA /* AppDelegate.swift */,
 				88D3F5E719ED3AEC0086ADDA /* ViewController.swift */,
 				88D3F5E919ED3AEC0086ADDA /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D3F5E819ED3AEC0086ADDA /* ViewController.swift in Sources */,
+				88D3F60619ED3AFF0086ADDA /* MXChartView.swift in Sources */,
 				88D3F5E619ED3AEC0086ADDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
