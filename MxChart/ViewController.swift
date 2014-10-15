@@ -75,6 +75,8 @@ class ViewController: UIViewController {
     }
   }
   
-  
+  override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+    chartView.setNeedsDisplay()
+  }
 }
 
