@@ -13,7 +13,14 @@ class MXDataSeries {
   var name = String()
   var lineColor: UIColor = UIColor.redColor()
   var lineWidth: CGFloat = 1
-  var capacity: Int?
+  var capacity: Int? {
+    didSet {
+      if let capa = capacity {
+        data = Array(count: capa, repeatedValue: CGPointMake(0, 0))
+        self.data.reserveCapacity(capa + 1)
+      }
+    }
+  }
   
   init(name: String) {
     self.name = name
@@ -33,9 +40,7 @@ class MXDataSeries {
     let p = CGPointMake(x, y)
     data.append(p)
     if let capa = self.capacity {
-      if (data.count > capa){
-        data.removeRange(0..<(data.count - capa))
-      }
+      data.removeRange(0..<1)
     }
   }
   
