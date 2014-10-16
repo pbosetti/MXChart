@@ -12,6 +12,7 @@ import CoreMotion
 class ViewController: UIViewController {
   @IBOutlet var chartView: MXChartView!
   @IBOutlet weak var simulateSwitch: UISwitch!
+  @IBOutlet weak var info: UILabel!
   
   @IBAction func toggle(sender: UITapGestureRecognizer) {
     self.active = !self.active
@@ -21,19 +22,19 @@ class ViewController: UIViewController {
   var active: Bool = false
   var queue = NSOperationQueue()
   let motionManager = CMMotionManager()
-  let frequency = 60.0
+  let frequency = 30.0
   var timer = NSTimer()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    chartView.series["x"] = MXDataSeries(name: "X acc")
+    chartView.addSeries("x", withLabel: "X acc")
     chartView.series["x"]?.lineWidth = 1
     chartView.series["x"]?.capacity = 100
-    chartView.series["y"] = MXDataSeries(name: "Y acc")
+    chartView.addSeries("y", withLabel: "Y acc")
     chartView.series["y"]?.lineWidth = 1
     chartView.series["y"]?.capacity = 100
     chartView.series["y"]?.lineColor = UIColor.blueColor()
-    chartView.series["z"] = MXDataSeries(name: "Z acc")
+    chartView.addSeries("z", withLabel: "Z acc")
     chartView.series["z"]?.lineWidth = 1
     chartView.series["z"]?.capacity = 100
     chartView.series["z"]?.lineColor = UIColor.greenColor()

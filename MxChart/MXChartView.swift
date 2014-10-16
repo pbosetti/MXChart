@@ -26,6 +26,10 @@ class MXDataSeries {
     self.name = name
   }
   
+  func count() -> Int {
+    return self.data.count
+  }
+  
   func randomFill(from: CGFloat, to: CGFloat, length: Int) {
     var x, y: CGFloat
     let rng = to - from
@@ -127,6 +131,18 @@ class MXDataSeries {
     p.y = ((point.y - fromRect.origin.y) / fromRect.height) * toRect.height + toRect.origin.y
     p.y = -p.y + toRect.height
     return p
+  }
+  
+  func addSeries(key: String, withLabel: String) {
+    series[key] = MXDataSeries(name: withLabel)
+  }
+  
+  func counts() -> Dictionary<String, Int> {
+    var result = Dictionary<String, Int>()
+    for (k, v) in series {
+      result[k] = v.count()
+    }
+    return result
   }
   
   func addPointToSerie(serie: String, x: CGFloat, y: CGFloat) {
