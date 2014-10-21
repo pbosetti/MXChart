@@ -240,7 +240,7 @@ class MXDataSeries {
     drawPlot(chartRect, atOffset: rectOffset)
     
     //// Label styles
-    let labelFont = UIFont(name: "Helvetica", size: 9)
+    let labelFont = UIFont(name: "Helvetica", size: 9)!
     let cLabelStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as NSMutableParagraphStyle
     let lLabelStyle: NSMutableParagraphStyle = cLabelStyle.mutableCopy() as NSMutableParagraphStyle
     let rLabelStyle: NSMutableParagraphStyle = cLabelStyle.mutableCopy() as NSMutableParagraphStyle
@@ -257,7 +257,7 @@ class MXDataSeries {
       
       for (k, v) in self.series {
         let text2Rect = CGRectMake(labelHeight + labelMargin, offset + labelMargin, 112, 20)
-        let text2FontAttributes = [NSFontAttributeName: UIFont(name: "Helvetica", size: 12), NSForegroundColorAttributeName: v.lineColor, NSParagraphStyleAttributeName: lLabelStyle]
+        let text2FontAttributes = [NSFontAttributeName: UIFont(name: "Helvetica", size: 12)!, NSForegroundColorAttributeName: v.lineColor, NSParagraphStyleAttributeName: lLabelStyle]
         v.name.drawInRect(text2Rect, withAttributes: text2FontAttributes);
         offset += legendLineOffset
       }
